@@ -1,0 +1,44 @@
+.topPage{
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  // background-color: lightyellow;
+    .Header{
+      width: 100%;
+      height: 100px;
+      background-color: mistyrose;
+      font-weight: bold;
+      .Header_list{
+        color: slategray;
+        // font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 60px;
+        height: 100%;
+          .appName{
+            display: flex;
+            align-items: center;
+
+            .appname1{
+              font-size: 45px;
+            }
+            .appname2{
+              font-size: 15px;
+            }
+          }
+          .sss{
+            display: flex;
+            font-size: 20px;
+              .confirmation{
+                margin: 0 15px;
+                font-weight: bold;
+              }
+          }
+      }
+    
+    }
+    .main{
+      width: 100%;
+      height: 100%;
+      display: flex;
+    }
+}
