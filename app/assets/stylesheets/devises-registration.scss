@@ -2,8 +2,7 @@
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   text-align: center;
   font-weight: bold;
-  
-  
+
   h2{
     height: 60px;
     padding-top: 20px;
@@ -12,27 +11,24 @@
     color: azure;
     font-weight: bold;
   }
-  
-  .bbb{
-    // border-radius: 10px 20px 30px 40px / 5px 10px 50px 100px;
-    // border: lightslategray;
+  .ccc{
     font-size: 20px;
     color: dimgray;
-    padding-top: 30px;
+    padding-top: 75px;
+   
 
     .field{
-      padding: 10px 0;
-      
-        label{
-          padding-bottom: 10px;
-        }
-    }
-    // .actions{
-      
-    // }
-
+      height: 85px;
     }
 
-   
+    .signup_btn{
+      background-color: darksalmon;
+      padding: 7px 15px;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      border-radius: 20px;
+      border: none;
+      color: white;
+    }
   }
-
+}

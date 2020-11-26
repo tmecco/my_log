@@ -1,16 +1,145 @@
 .side-ber{
   width: 400px;
   height: 100%;
-  // background-color: moccasin;;
+  margin-right: 40px;
   text-align: center;
+  // margin-top: 50px;
+  
+  
+
+  //以下ははじめに出される画面
+  .home_side_ber{
+    margin-top: 100px;
+    .title{
+      background-color: #555555;
+      border-radius: 30px;
+      font-size: 30px;
+      color: white;
+      font-family: 'Arial Black',sans-serif;
+      margin-top: 50px;
+      border-bottom: solid 2px slategray;
+      
+    }
+    .plan{
+      margin-top: 30px;
+      // border: gray solid 3px;
+      padding: 50px;
+    }
+    .random_memo{
+      margin-top: 30px;
+      // border: gray solid 3px;
+      padding: 50px;
+    }
     .day{
       font-size: 40px;
-      color: gray;
-      border-bottom: gray;
-      margin: 30px 0;
+      color: slategray;
+      border-bottom:  slategray solid 2px;
+      margin: 15px ;
     }
-    .input{
-      margin: 20px 0;
+  
+  }
+  
+  //以下は投稿アイコンを押したときに呼び出される画面
+  .postPage{
+    font-family: 'Arial Black',sans-serif;
+
+    .post_form{
+      
+      .day{
+        font-size: 40px;
+        color: slategray;
+        border-bottom:  slategray solid 2px;
+        margin: 15px ;
+      } 
+        .postColumn{
+          color: #FFFAFA;
+          width: 80%;
+          margin: 30px 38px 0 36px;
+         
+            .postContents{
+              width: 100%;
+              font-size: 20px;
+              background-color: #444444;
+              display: block;
+            }
+            .textarea-large{
+              width: 100%;
+              resize: none;
+            }
+        }
+        .post_submit{
+          width: 40%;
+          margin-top: 25px;
+          border-radius: 30px;
+          background-color: mistyrose;
+          border:  slategray solid 2.5px;
+          font-weight: bold;
+          color:  slategray;
+          padding: 7px;
+        }
+      
+    }
+  }
+
+  // 以下はカレンダーの日付を押したときに呼び出される画面
+  .select_calendar{
+    font-family: 'Arial Black',sans-serif;
+
+    .select_calendar_form{
+      
+      .select_day{
+        font-size: 40px;
+        color: slategray;
+        border-bottom:  slategray solid 2px;
+        margin: 35px 15px 15px 15px ;
+      } 
+        .selectColumn{
+          color: #FFFAFA;
+          width: 80%;
+          margin: 40px 38px 0 36px;
+          width: 100%;
+         
+            .selectContents{
+              width: 81.25%;
+              font-size: 20px;
+              background-color: #444444;
+              display: block;
+            }
+            .selectData-selectDay{
+              width: 80%;
+              color:dimgray;
+              //border: dimgray solid 2px;
+              padding: 20px 0;
+            }
+            .selectData-tomorrow{
+              width: 80%;
+              color:dimgray;
+              //border: dimgray solid 2px;
+              padding: 20px 0;
+            }
+            .selectData-memo{
+              width: 80%;
+              color:dimgray;
+              //border: dimgray solid 2px;
+              padding: 20px 0;
+            }
+        }
         
+      
     }
+  
+    
+    
+  }
+
+
+
+
+
+
+
+
+
 }
+
+

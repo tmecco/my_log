@@ -85,6 +85,8 @@ GEM
     erubi (1.9.0)
     erubis (2.7.0)
     ffi (1.13.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     fullcalendar-rails (3.9.0.0)
       jquery-rails (>= 4.0.5, < 5.0.0)
       jquery-ui-rails (>= 5.0.2)
@@ -256,6 +258,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  font-awesome-rails
   fullcalendar-rails
   haml-rails (>= 1.0, <= 2.0.1)
   jbuilder (~> 2.7)

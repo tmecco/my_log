@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_11_03_052552) do
     t.text "tomorrow"
     t.text "memo"
     t.bigint "user_id", null: false
+    t.string "day", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_diaries_on_user_id"

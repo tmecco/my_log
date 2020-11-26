@@ -1,26 +1,25 @@
 class DiarysController < ApplicationController
-#   def create
-#     event = Event.new(event_params)
-#     event.save!
-#     @events = Event.where(user_id: current_user.id)
-# end
 
-# def update
-#     event = Event.find(params[:id])
-#     @events = Event.where(user_id: current_user.id)
-#     event.update(event_params)
-# end
+  def index
+  end
 
-# def destroy
-#     @user = User.find(params[:id])
-#     event = Event.find(params[:id])
-#     event.destroy
-#     redirect_to user_path(@user)
-# end
+  def create
+    @today_diary = Diary.new(set_diary_params) 
+    @today_diary.save
+  end
 
-# private
-# def event_params
-#     params.require(:event).permit(:title, :start, :end, :user_id, :body)
-# end
+  def past
+    @params = serectDay_params
+    @select_day = Diary.find_by(day: @params)
+  end
 
+  private 
+
+  def set_diary_params
+    params.permit(:episode, :tomorrow, :memo, :day).merge(user_id: current_user.id)
+  end
+
+  def serectDay_params
+    params[:select_day]
+  end
 end

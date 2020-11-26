@@ -3,24 +3,76 @@
     .Header_list
       .appName
         %p.appname1 マイログ
-        %p.appname2 − ゆるっと毎日を記録 -
-      .sss  
-        -if user_signed_in?
-          %a.mypage マイページ  
-          %a.confirmation 投稿する
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
-        - else
-          -# %h2.confirmation ログインしていません
-          = link_to "新規登録", new_user_registration_path 
-          = link_to "ログイン", new_user_session_path
+        %p.appname2  - ゆるっと毎日を記録 -  
+        
+      -if user_signed_in?
+        .icons
+          .mypage_icon
+            %i.fa.fa-user-circle-o.icon 
+          .post_icon
+            %i.fa.fa-pencil-square-o.icon
+          .sign-out_icon
+            = link_to destroy_user_session_path, method:"delete" do
+              %i.fa.fa-sign-out.icon
+      - else
+        .userAcount
+          = link_to "新規登録", new_user_registration_path ,class:"new_user_registration"
+          = link_to "ログイン", new_user_session_path,class:"new_user_session"
+    -# .Header_list_name
+
+        -#   = link_to "ログアウト", destroy_user_session_path, method: :delete
+        -# - else
+        -#   -# %h2.confirmation ログインしていません
+        -#   = link_to "新規登録", new_user_registration_path 
+        -#   = link_to "ログイン", new_user_session_path
 
   .main
-    = render partial: 'main-tab'
-    = render partial: 'side-ber'
+    -if user_signed_in?
+      = render partial: 'main-tab'
+      = render partial: 'side-ber'
+      
+    - else
+      .notLoginMain 
+        .notLoginMain_text
+          %h1.mainText 
+            ようこそ
+            %span マイログ
+            へ
+          %p.subMainText 新規登録またはログインしてお使いください
+        .notLoginMain_introduction
+          = image_tag 'buckCalendar.png',alt:"Calendar", class:"calendarExample"
+          %h2.introduction 
+            カレンダーで日々の記録を
+            %br/
+            カンタン・シンプルに
+        .notLoginMain_function
+          .main_function#a
+            .main_function_a_text
+              マイログ
+              %br/
+              って？
+              
+          .main_function#b
+            .main_function_b_text 
+              できること
+          .main_function#c 
+            .main_function_c_text
+              開発者
+              %br/
+              について
+
+
+
   .Footer
 
 
 
+
+
+
+
+
+-# %i.fa.fa-bars.icon
 
 -# -if user_signed_in?
 -#   %h2 ログインしています
