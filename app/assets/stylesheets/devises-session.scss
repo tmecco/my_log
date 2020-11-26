@@ -1,0 +1,48 @@
+.loginPage{
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+  text-align: center;
+  font-weight: bold;
+  
+  
+  h2{
+    height: 60px;
+    padding-top: 20px;
+    font-size: 33px;
+    background-color: darksalmon;
+    color: azure;
+    font-weight: bold;
+  }
+  
+  .bbb{
+    font-size: 20px;
+    color: dimgray;
+    margin-top: 80px;
+
+    .field{
+      padding: 10px 0;
+      height: 75px;
+      
+        .label{
+          // margin-bottom: 70px;
+        }
+    }
+    .remember_me{
+      height: 60px;
+    }
+    .actions{
+      margin-bottom: 20px;
+    }
+    .login_btn{
+      background-color: darksalmon;
+      padding: 7px 15px;
+      border-radius: 20px;
+      border: none;
+      color: white;
+    }
+    
+
+    }
+
+   
+  }
+

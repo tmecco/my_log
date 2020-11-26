@@ -1,7 +1,56 @@
 .side-ber 
-  %h1.day 20xx.xx.xx
-  .input
-    %textarea{:cols => "40", :rows => "5"} 今日：200文字以内
-    %textarea{:cols => "40", :rows => "5"} 明日：200文字以内
-    %textarea{:cols => "40", :rows => "5"} メモ：200文字以内
-  %input{:type => "submit", :value => "送信"}/
+
+  .home_side_ber
+    -if user_signed_in?
+      %h1.title TODAY
+      %p.plan 昨日入力した今日の目標を出す
+      %h1.title MEMO 
+      %p.random_memo 今まで書いたメモをランダムで表示させる。
+    - else
+      %h1.day 2020/11/16
+
+  .postPage
+    .post_form 
+      %h1.day 2020/11/16
+      = form_with url: diarys_path, method: "POST", class: "post_formDate" do |f|
+        .postColumn
+          -# %p.postContents TODAY
+          %label.postContents{:for => "today"} TODAY
+          = f.text_area :episode,{:class => "textarea-large", :id => "today", :cols => "40", :rows => "4",:placeholder => "今日はどんな一日だった？"} 
+        .postColumn 
+          -# %p.postContents TOMORROW
+          %label.postContents{:for => "tomorrow"} TOMORROW
+          = f.text_area :tomorrow,{:class => "textarea-large", :id => "tomorrow", :cols => "40", :rows => "4",:placeholder => "明日はどんな一日にしたい？"} 
+        .postColumn
+          -# %p.postContents MEMO
+          %label.postContents{:for => "memo"} MEMO
+          = f.text_area :memo,{:class => "textarea-large", :id => "memo", :cols => "40", :rows => "4",:placeholder => "すきなこと・コトバをメモしよう"} 
+        %input.post_submit{:type => "submit", :value => "ポチッ"}/
+
+  .select_calendar
+    .select_calendar_form 
+      %h1.select_day 2020/11/16
+
+      .selectColumn
+        %p.selectContents TODAY
+        .selectData-selectDay 選択した日にちの情報(今日) 
+
+      .selectColumn 
+        %p.selectContents TOMORROW
+        .selectData-tomorrow 選択した日にちの情報(明日) 
+        
+      .selectColumn
+        %p.selectContents MEMO
+        .selectData-memo 選択した日にちの情報(めも) 
+
+  -# .configPage
+  -#   = link_to "ログアウト", destroy_user_session_path, method: :delete
+
+
+
+
+
+
+
+
+

@@ -5,6 +5,7 @@ class CreateDiaries < ActiveRecord::Migration[6.0]
       t.text :tomorrow
       t.text :memo
       t.references  :user, null: false, foreign_key: true
+      t.string :day, unique: true ,null: false
 
       t.timestamps
     end

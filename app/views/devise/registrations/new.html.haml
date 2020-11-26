@@ -1,6 +1,6 @@
 .aaa
   %h2 しんきとーろく
-  .bbb
+  .ccc
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
       .field
@@ -15,7 +15,7 @@
         = f.label :ぱすわーど
         - if @minimum_password_length
           %em
-            (#{@minimum_password_length} 文字以上で入力してね)
+            (#{@minimum_password_length} 文字以上)
         %br/
         = f.password_field :password, autocomplete: "new-password"
       .field
@@ -23,5 +23,5 @@
         %br/
         = f.password_field :password_confirmation, autocomplete: "new-password"
       .actions
-        = f.submit "Sign up"
+        = f.submit "レッツとーろく", class:"signup_btn"
     = render "devise/shared/links"

@@ -1,3 +1,20 @@
+a {
+  color: slategray;
+  text-decoration: none
+}
+a :hover{
+  color: #444444;
+}
+.mypage_icon :hover{
+  color: #444444;
+  cursor: pointer;
+}
+.post_icon:hover{
+  color: #444444;
+  cursor: pointer;
+}
+
+
 .topPage{
   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
   // background-color: lightyellow;
@@ -6,39 +23,186 @@
       height: 100px;
       background-color: mistyrose;
       font-weight: bold;
-      .Header_list{
-        color: slategray;
-        // font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 60px;
-        height: 100%;
-          .appName{
-            display: flex;
-            align-items: center;
+      font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+        .Header_list{
+          color: slategray;
+          // font-weight: bold;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 60px;
+          height: 100%;
+            .appName{
+              display: flex;
+              align-items: center;
 
-            .appname1{
-              font-size: 45px;
-            }
-            .appname2{
-              font-size: 15px;
-            }
-          }
-          .sss{
-            display: flex;
-            font-size: 20px;
-              .confirmation{
-                margin: 0 15px;
-                font-weight: bold;
+              .appname1{
+                font-size: 45px;
               }
-          }
-      }
+              .appname2{
+                font-size: 15px;
+              }
+            }
+            .icons{
+              font-size: 30px;
+              display: flex;
+              // color: darkred;
+                .post_icon{
+                  margin: 0 25px;
+                  font-weight: bold;
+                }
+                .sign-out_icon{
+                  
+                }
+                .new_user_registration{
+                  background-color: white;
+                  font-size: 20px;
+                  text-decoration: none
+                  
+                }
+            }
+            .userAcount{
+              display: flex;
+              font-size: 20px;
+          
+                .new_user_registration{
+                  margin-right: 20px;
+                  background-color: white;
+                  padding: 7px 15px;
+                  border-radius: 20px;
+                  
+                }
+                .new_user_registration:hover{
+                  margin-right: 20px;
+                  background-color: #444444;
+                  color: white;
+                  padding: 7px 15px;
+                  border-radius: 20px;
+                  cursor: pointer;
+                  
+                }
+                .new_user_session{
+                  margin-right: 20px;
+                  background-color: white;
+                  padding: 7px 15px;
+                  border-radius: 20px;
+                }
+                .new_user_session:hover{
+                  margin-right: 20px;
+                  background-color: #444444;
+                  color: white;
+                  padding: 7px 15px;
+                  border-radius: 20px;
+                  cursor: pointer;
+                }
+            }
+
+        }
     
     }
     .main{
       width: 100%;
-      height: 100%;
+      height: calc(100% - 100px);;
       display: flex;
+      .notLoginMain {
+      height: calc(100vh - 100px);
+      width: 100%;
+      background-image: image-url( "day-planner-828611_1280.jpg" );
+      background-size: 100% auto;
+      background-color:rgba(255,255,255,0.8);
+      background-blend-mode:lighten;
+      position: relative;
+      font-family: 'klee',sans-serif;
+        .notLoginMain_text{
+          color: #666666;
+          font-weight: bold;
+          position: absolute;
+          top: 130px;
+          left: 680px;
+            .mainText{
+              font-size: 55px;
+            }
+            span{
+              font-weight: bold;
+              color: #BC8F8F;
+            }
+            .subMainText{
+              font-size: 35px;
+              margin-top: 30px;
+            }
+        }
+        .notLoginMain_introduction{
+          color: #666666;
+          font-weight: bold;
+            .calendarExample{
+              position: absolute;
+              top: 100px;
+              left: 50px;
+              object-fit: contain;
+              width: 40%;
+              opacity: 0.85;
+            }
+            .introduction{
+              text-align: center;
+              position: absolute;
+              opacity: 0.7;
+              top: 500px;
+              left: 200px;
+              font-size: 25px;
+            }
+        }
+        .notLoginMain_function{
+          display: flex;
+          position: absolute;
+          top: 350px;
+          left: 650px;
+          .main_function{
+            width: 210px;
+            height: 210px;
+            border-radius: 105px;
+            opacity: 0.45;
+            margin: 15px;
+            font-size: 33px;
+            text-align: center;
+            .main_function_a_text{
+              margin-top: 50px;
+            }
+            .main_function_b_text {
+              margin-top: 70px;
+            }
+            .main_function_c_text{
+              margin-top: 50px;
+            }
+            }
+            #a{
+              background-color: #EAD9FF;
+              border:solid 2.5px #D0B0FF;
+            }
+            #a:hover{
+              background-color: #D0B0FF;
+              color:#5507FF;
+              
+            }
+            #b{
+              background-color: #FFD5EC;
+              border:solid 2.5px #FFABCE;
+
+            }
+            #b:hover{
+              background-color: #FFABCE;
+              color: #FF0461;
+            }
+            #c{
+              background-color: #FFDBC9;
+              border:solid 2.5px #FFAD90;
+            }
+            #c:hover{
+              background-color: #FFAD90;
+              color: #FF4F02;
+            }
+            
+        }
+     }
+
     }
-}
+  }
